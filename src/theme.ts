@@ -1,5 +1,4 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { green, purple } from '@mui/material/colors';
 
 let theme = createTheme({
   palette: {
@@ -11,8 +10,10 @@ let theme = createTheme({
     },
     },
     typography: {
-        fontFamily: "Segoe UI"
-  }
+        fontFamily: [
+            '"Segoe UI"',
+        ].join(','),
+    }
 });
 
 theme = responsiveFontSizes(theme);
