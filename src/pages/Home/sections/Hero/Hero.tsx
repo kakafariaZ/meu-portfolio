@@ -48,7 +48,7 @@ const Hero = () => {
                         <Typography color="primary.contrastText" variant="h2" textAlign="center">Desenvolvedor FullStack</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                             <Grid size={{xs : 12, md : 4}} display="flex" justifyContent="center">
-                                <StyledButton>
+                                <StyledButton onClick={() => console.log("curriculo")}>
                                     <DownloadIcon/>
                                     <Typography>
                                         Currículo
@@ -56,7 +56,7 @@ const Hero = () => {
                                 </StyledButton>
                             </Grid>
                             <Grid size={{xs : 12, md : 4}} display="flex" justifyContent="center">
-                                <StyledButton>
+                                <StyledButton onClick={() => console.log("contato")}>
                                     <EmailIcon/>
                                     <Typography>
                                         Contato
