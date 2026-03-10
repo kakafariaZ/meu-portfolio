@@ -1,8 +1,8 @@
-import { Container, Grid, Typography, styled, Paper } from "@mui/material"
-import CodeIcon from '@mui/icons-material/Code';
-import TerminalIcon from '@mui/icons-material/Terminal';
-import PolylineIcon from '@mui/icons-material/Polyline';
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import { Container, Grid, Typography, styled, Paper } from "@mui/material";
+import CodeIcon from "@mui/icons-material/Code";
+import TerminalIcon from "@mui/icons-material/Terminal";
+import PolylineIcon from "@mui/icons-material/Polyline";
+import IntegrationInstructionsIcon from "@mui/icons-material/IntegrationInstructions";
 
 const StyledAbout = styled("section")(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
@@ -11,38 +11,35 @@ const StyledAbout = styled("section")(({ theme }) => ({
   alignItems: "center",
 
   [theme.breakpoints.up("xs")]: {
-    paddingTop: "100px"
+    paddingTop: "100px",
   },
 
   [theme.breakpoints.up("md")]: {
-    paddingTop: "0"
-  }
-}))
+    paddingTop: "0",
+  },
+}));
 
 const InfoCard = styled(Paper)(() => ({
   padding: "20px",
   backgroundColor: "rgba(255,255,255,0.05)",
   backdropFilter: "blur(10px)",
-  border: "1px solid rgba(255,255,255,0.1)"
-}))
+  border: "1px solid rgba(255,255,255,0.1)",
+}));
 
 const About = () => {
   return (
     <StyledAbout>
-
       <Container maxWidth="lg">
-
         <Grid container spacing={6} alignItems="center">
-
           {/* Texto */}
           <Grid size={{ xs: 12, md: 6 }}>
-
             <Typography
               variant="h3"
               color="primary.contrastText"
+              sx={{ fontWeight: 500 }}
               gutterBottom
             >
-                    Sobre mim
+              Sobre mim
             </Typography>
 
             <Typography
@@ -65,14 +62,11 @@ const About = () => {
               sistemas e desenvolvimento de interfaces modernas, contribuindo
               para produtos de alto impacto.
             </Typography>
-
           </Grid>
 
           {/* Cards */}
           <Grid size={{ xs: 12, md: 6 }}>
-
             <Grid container spacing={3}>
-
               <Grid size={{ xs: 12, md: 6 }}>
                 <InfoCard>
                   <Typography variant="h6">
@@ -115,7 +109,9 @@ const About = () => {
               <Grid size={{ xs: 12, md: 6 }}>
                 <InfoCard>
                   <Typography variant="h6">
-                    <IntegrationInstructionsIcon sx={{ verticalAlign: "middle", mr: 1 }} />
+                    <IntegrationInstructionsIcon
+                      sx={{ verticalAlign: "middle", mr: 1 }}
+                    />
                     Integração
                   </Typography>
 
@@ -124,17 +120,12 @@ const About = () => {
                   </Typography>
                 </InfoCard>
               </Grid>
-
             </Grid>
-
           </Grid>
-
         </Grid>
-
       </Container>
-
     </StyledAbout>
-  )
-}
+  );
+};
 
-export default About
+export default About;
