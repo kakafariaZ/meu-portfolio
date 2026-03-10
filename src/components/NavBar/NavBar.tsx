@@ -4,7 +4,7 @@ import { AppBar, MenuItem, styled, Toolbar } from "@mui/material"
 
 const NavBar = () => {
 
-    const StyledToobar = styled(Toolbar)(() => ({
+    const StyledToolbar = styled(Toolbar)(() => ({
         display: "flex",
         justifyContent: "space-evenly"
     }))
@@ -12,11 +12,11 @@ const NavBar = () => {
     return (
     <>
         <AppBar position="absolute">
-            <StyledToobar>
-            <MenuItem>Sobre</MenuItem>
-            <MenuItem>Habilidades</MenuItem>
-            <MenuItem>Projetos</MenuItem>
-            </StyledToobar>
+            <StyledToolbar>
+            <MenuItem sx={{ color: "rgb(16, 68, 128)" }}>Sobre</MenuItem>
+            <MenuItem sx={{ color: "rgb(16, 68, 128)" }}>Habilidades</MenuItem>
+            <MenuItem sx={{ color: "rgb(16, 68, 128)" }}>Projetos</MenuItem>
+            </StyledToolbar>
         </AppBar>
     </>
     )
