@@ -9,6 +9,7 @@ const StyledAbout = styled("section")(({ theme }) => ({
   minHeight: "100vh",
   display: "flex",
   alignItems: "center",
+  scrollMarginTop: "80px",
 
   [theme.breakpoints.up("xs")]: {
     paddingTop: "100px",
@@ -28,7 +29,7 @@ const InfoCard = styled(Paper)(() => ({
 
 const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="sobre">
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
           {/* Texto */}

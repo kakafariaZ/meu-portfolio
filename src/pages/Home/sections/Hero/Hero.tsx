@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <>
-      <StyledHero>
+      <StyledHero id="habilidades">
         <Box
           sx={{
             position: "absolute",

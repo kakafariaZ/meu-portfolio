@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/static-components */
 import Project1 from "../../../../assets/images/project1.png";
 import Project2 from "../../../../assets/images/project2.png";
 import Project3 from "../../../../assets/images/project3.png";
@@ -18,7 +17,7 @@ import {
   Box,
 } from "@mui/material";
 
-const StyledProjects = styled("section")(({ theme }) => ({
+const StyledProjects = styled("section")(() => ({
   background: `linear-gradient(180deg, #00a2ff 0%, #00fff2 100%)`,
   minHeight: "100vh",
   paddingTop: "160px",
@@ -71,24 +70,24 @@ const NavButton = styled(Button)(({ theme }) => ({
 }));
 
 const Projects = () => {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({
+    scrollRef.current?.scrollBy({
       left: -450,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
-    scrollRef.current.scrollBy({
+    scrollRef.current?.scrollBy({
       left: 450,
       behavior: "smooth",
     });
   };
 
   return (
-    <StyledProjects>
+    <StyledProjects id="projetos">
       <Container maxWidth="lg">
         <Typography
           variant="h2"
