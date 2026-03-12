@@ -3,7 +3,7 @@ import { Container, styled } from "@mui/material";
 import { Grid, Typography, Box } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.png";
 import DownloadIcon from "@mui/icons-material/Download";
-import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AnimatedBackground from "../../../../components/AnimatedBackground/AnimatedBackground";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 
@@ -13,8 +13,8 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
-    position: "relative", // Importante: Referência para o background
-    overflow: "hidden", // Garante que o SVG não crie barras de rolagem
+    position: "relative",
+    overflow: "hidden", 
 
     [theme.breakpoints.up("xs")]: {
       paddingTop: "100px",
@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <>
-      <StyledHero id="habilidades">
+      <StyledHero id="home">
         <Box
           sx={{
             position: "absolute",
@@ -81,20 +81,28 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <StyledButton onClick={() => console.log("curriculo")}>
-                    <DownloadIcon />
-                    <Typography>Currículo</Typography>
-                  </StyledButton>
+                  <a href="/kauan_farias_cv_2026.pdf" download>
+                    <StyledButton onClick={() => console.log("curriculo baixado")}>
+                      <DownloadIcon />
+                      <Typography>Currículo</Typography>
+                    </StyledButton>
+                  </a>
                 </Grid>
                 <Grid
                   size={{ xs: 12, md: 4 }}
                   display="flex"
                   justifyContent="center"
                 >
-                  <StyledButton onClick={() => console.log("contato")}>
-                    <EmailIcon />
-                    <Typography>Contato</Typography>
-                  </StyledButton>
+                  <a
+                    href="https://linkedin.com/in/kauanfarias01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <StyledButton onClick={() => console.log("Linkedin clicado")}>
+                      <LinkedInIcon />
+                      <Typography>Linkedin</Typography>
+                    </StyledButton>
+                  </a>
                 </Grid>
               </Grid>
             </Grid>

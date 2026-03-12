@@ -6,7 +6,7 @@ const AnimatedBackground: React.FC = () => {
   return (
     <Box
       sx={{
-        position: 'absolute', // Mudança de fixed para absolute
+        position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',

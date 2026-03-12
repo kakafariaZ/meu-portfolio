@@ -1,5 +1,7 @@
 import { styled, Typography, Container, Grid, Chip, Box } from "@mui/material";
 import BoltIcon from "@mui/icons-material/Bolt";
+import { FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { DiMysql, DiPostgresql } from "react-icons/di";
 import {
   SiTypescript,
   SiPython,
@@ -8,16 +10,16 @@ import {
   SiDocker,
   SiFigma,
 } from "react-icons/si";
-import { FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { DiMysql, DiPostgresql } from "react-icons/di";
 
 const StyledSkills = styled("section")(() => ({
   background: "#005e51",
   minHeight: "100vh",
   display: "flex",
   alignItems: "center",
-  scrollMarginTop: "80px",
-  padding: "140px 0",
+  justifyContent: "center",
+  
+  scrollMarginTop: "80px", 
+  padding: "100px 0",
 }));
 
 const SkillChip = styled(Chip)(({ theme }) => ({
@@ -56,11 +58,9 @@ const Skills = () => {
   return (
     <StyledSkills id="habilidades">
       <Container maxWidth="md">
-        {" "}
-        {/* mais largo */}
         <Box textAlign="center" mb={8}>
           <Typography
-            variant="h2" // maior
+            variant="h2"
             fontWeight="bold"
             color="primary.main"
             gutterBottom
@@ -73,10 +73,11 @@ const Skills = () => {
             Tecnologias e ferramentas que utilizo no desenvolvimento
           </Typography>
         </Box>
+
         <Grid container spacing={3} justifyContent="center">
           {skills.map((skill, index) => (
-            <Grid item key={index}>
-              <SkillChip icon={skill.icon} label={skill.name} />
+            <Grid key={index}>
+               <SkillChip icon={skill.icon} label={skill.name} />
             </Grid>
           ))}
         </Grid>
